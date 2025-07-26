@@ -1,17 +1,63 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>FartBox Ai</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-      body { font-family: sans-serif; text-align: center; padding: 2em; background: #111; color: #0f0; }
-      h1 { font-size: 2em; margin-bottom: 0.5em; }
-      p { font-size: 1.2em; }
-    </style>
-  </head>
-  <body>
-    <h1>💨 FartBox Ai</h1>
-    <p>EchoAi is live and learning.</p>
-    <p>More power to the people with fart boxes 💚</p>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FartboxAI</title>
+  <style>
+    body {
+      background: #111;
+      color: #eee;
+      font-family: sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+    .box {
+      background: #222;
+      padding: 20px;
+      border-radius: 15px;
+      max-width: 600px;
+      margin: auto;
+      box-shadow: 0 0 20px limegreen;
+    }
+    textarea {
+      width: 90%;
+      height: 150px;
+      margin: 10px 0;
+      border-radius: 10px;
+      padding: 10px;
+      font-size: 16px;
+    }
+    button, input[type="file"] {
+      margin: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+    }
+    .fart {
+      background: green;
+      color: white;
+    }
+    .upload {
+      background: darkblue;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h1>💨 FartboxAI</h1>
+    <p>Welcome to your AI-powered command center</p>
+    
+    <textarea placeholder="Talk to EchoAi here..."></textarea><br/>
+
+    <button class="fart" onclick="alert('💨 FART!')">💨 Fart Button</button>
+    
+    <br/>
+    <input type="file" class="upload">
+    <p>File upload coming soon...</p>
+  </div>
+</body>
 </html>
