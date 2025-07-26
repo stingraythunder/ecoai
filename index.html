@@ -20,41 +20,66 @@
       margin: auto;
       box-shadow: 0 0 20px limegreen;
     }
-    <div>
-  <textarea id="userInput" placeholder="EcoAi how may I help you..."></textarea><br/>
-  <button class="send" onclick="sendToEcho()">🫡 Send</button>
-  <div id="echoResponse" style="margin-top:20px; font-style:italic;"></div>
-    }
-    button, input[type="file"] {
-      margin: 10px;
-      padding: 10px 20px;
-      font-size: 16px;
+    textarea {
+      width: 90%;
+      height: 150px;
+      margin: 10px 0;
       border-radius: 10px;
-      border: none;
+      padding: 10px;
+      font-size: 16px;
+    }
+    .send {
+      background: #444;
+      color: white;
+      font-weight: bold;
+      border-radius: 12px;
+      padding: 10px 20px;
+      font-size: 18px;
+      border: 2px solid limegreen;
       cursor: pointer;
     }
-    .fart {
-      background: green;
-      color: white;
+    .send:hover {
+      background: #666;
     }
-    .upload {
-      background: darkblue;
-      color: white;
+    input[type="file"] {
+      margin: 10px;
+      padding: 8px;
+      border-radius: 8px;
+      border: none;
     }
   </style>
 </head>
 <body>
   <div class="box">
-    <h1>💨 EcoAI</h1>
-    <p>Welcome to your AI-powered command center</p>
-    
-    <textarea placeholder="Talk to EchoAi here..."></textarea><br/>
+    <h1>🌱 EcoAi</h1>
+    <p>Welcome to your personal AI companion</p>
 
-    <button class="fart" onclick="alert('💨 FART!')">💨 Fart Button</button>
-    
+    <div>
+      <textarea id="userInput" placeholder="Type your message to EchoAi..."></textarea><br/>
+      <button class="send" onclick="sendToEcho()">🫡 Send</button>
+      <div id="echoResponse" style="margin-top:20px; font-style:italic;"></div>
+    </div>
+
     <br/>
+
     <input type="file" class="upload">
     <p>File upload coming soon...</p>
   </div>
+
+  <script>
+    function sendToEcho() {
+      const input = document.getElementById("userInput").value;
+      const responseBox = document.getElementById("echoResponse");
+
+      if (input.trim() === "") {
+        responseBox.innerText = "EchoAi is waiting for your message...";
+        return;
+      }
+
+      const fakeReply = "🧠 EchoAi says: \"" + input + "\"... Interesting thought.";
+      responseBox.innerText = fakeReply;
+      document.getElementById("userInput").value = "";
+    }
+  </script>
 </body>
 </html>
