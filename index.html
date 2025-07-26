@@ -20,13 +20,10 @@
       margin: auto;
       box-shadow: 0 0 20px limegreen;
     }
-    textarea {
-      width: 90%;
-      height: 150px;
-      margin: 10px 0;
-      border-radius: 10px;
-      padding: 10px;
-      font-size: 16px;
+    <div>
+  <textarea id="userInput" placeholder="Type your message to EchoAi..."></textarea><br/>
+  <button class="send" onclick="sendToEcho()">🫡 Send</button>
+  <div id="echoResponse" style="margin-top:20px; font-style:italic;"></div>
     }
     button, input[type="file"] {
       margin: 10px;
@@ -48,7 +45,7 @@
 </head>
 <body>
   <div class="box">
-    <h1>💨 FartboxAI</h1>
+    <h1>💨 EcoAI</h1>
     <p>Welcome to your AI-powered command center</p>
     
     <textarea placeholder="Talk to EchoAi here..."></textarea><br/>
